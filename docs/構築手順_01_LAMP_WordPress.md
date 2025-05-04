@@ -48,7 +48,7 @@ WordPressの初期セットアップ画面が表示されることを確認す�
 
 ### ✅ WordPress 初期画面確認
 
-![WordPress初期画面](images/wp_install_screen_2025-05-04.png)
+![WordPress初期画面](./images/wp_install_screen_2025-05-04.png)
 
 
 
