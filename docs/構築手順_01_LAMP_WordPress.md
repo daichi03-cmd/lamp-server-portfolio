@@ -63,5 +63,3 @@ CREATE USER 'wpuser'@'localhost' IDENTIFIED BY 'password';
 GRANT ALL PRIVILEGES ON wordpress.* TO 'wpuser'@'localhost';
 FLUSH PRIVILEGES;
 EXIT;
-
-![WordPress初期画面](./wp_install_screen_2025-05-04.png)
