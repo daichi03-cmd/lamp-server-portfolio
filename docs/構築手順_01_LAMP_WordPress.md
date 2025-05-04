@@ -48,6 +48,7 @@ WordPressの初期セットアップ画面が表示されることを確認す�
 
 
 
+
 ### 2.5 WordPressのデータベース接続設定
 
 #### ① MariaDBでWordPress用のDBとユーザーを作成
