@@ -50,6 +50,7 @@ WordPressの初期セットアップ画面が表示されることを確認す�
 ![WordPress初期画面](images/wp_install_screen_2025-05-04.png)
 
 
+
 ### 2.5 WordPressのデータベース接続設定
 
 #### ① MariaDBでWordPress用のDBとユーザーを作成
