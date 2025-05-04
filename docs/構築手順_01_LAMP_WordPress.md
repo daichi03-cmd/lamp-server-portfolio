@@ -46,12 +46,6 @@ sudo chmod -R 755 /var/www/html
 作業後、Webブラウザで `http://<LAMPサーバーのIPアドレス>/` にアクセスし、  
 WordPressの初期セットアップ画面が表示されることを確認する。
 
-### ✅ WordPress 初期画面確認
-
-![WordPress初期画面](./images/wp_install_screen_2025-05-04.png)
-
-
-
 
 ### 2.5 WordPressのデータベース接続設定
 
