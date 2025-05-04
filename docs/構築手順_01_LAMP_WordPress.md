@@ -56,10 +56,12 @@ WordPressの初期セットアップ画面が表示されることを確認す�
 ```bash
 sudo mysql -u root -p
 
+
+
 CREATE DATABASE wordpress DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 CREATE USER 'wpuser'@'localhost' IDENTIFIED BY 'password';
 GRANT ALL PRIVILEGES ON wordpress.* TO 'wpuser'@'localhost';
 FLUSH PRIVILEGES;
 EXIT;
 
-
+![WordPress初期画面](./wp_install_screen_2025-05-04.png)
