@@ -44,7 +44,8 @@ sudo chown -R www-data:www-data /var/www/html
 sudo chmod -R 755 /var/www/html
 
 作業後、Webブラウザで `http://<LAMPサーバーのIPアドレス>/` にアクセスし、  
-WordPressの初期セットアップ画面が表示されることを確認する。
+WordPressの初期セットアップ画面が表示されることを確認する
+
 
 
 ### 2.5 WordPressのデータベース接続設定
