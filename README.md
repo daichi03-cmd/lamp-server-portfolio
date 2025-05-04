@@ -7,9 +7,8 @@ LAMP + Zabbix + Postfix構成で作ったインフラ構築ポートフォリオ
 - Zabbixで異常を検知して通知が送られる画面
 - Postfixでメールが届いている様子
 
-- ## 📊 構成図
-
 ![構成図](./docs/lamp_zabbix_postfix.png)
+
 
 
 ## ✍️ 構築の工夫ポイント
