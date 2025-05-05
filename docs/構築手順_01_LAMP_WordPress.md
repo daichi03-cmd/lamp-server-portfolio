@@ -163,21 +163,22 @@ sudo fail2ban-client status sshd
 
 #### logrotate（ログローテーション）設定
 sudo apt install logrotate -y
-sudo nano /etc/logrotate.d/wordpress
+sudo nano /etc/logrotate.d/apache2
 
-/var/log/wordpress.log {
+/var/log/apache2/*.log {
     daily
     missingok
     rotate 14
     compress
     delaycompress
     notifempty
-    create 644 www-data www-data
+    create 640 root adm
     sharedscripts
     postrotate
-        systemctl reload apache2 > /dev/null 2>/dev/null || true
+        systemctl reload apache2 > /dev/null 2>&1 || true
     endscript
 }
+
 
 
 
