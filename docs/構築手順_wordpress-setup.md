@@ -11,9 +11,13 @@ sudo rmdir wordpress
 sudo rm latest-ja.tar.gz
 sudo chown -R www-data:www-data /var/www/html
 sudo chmod -R 755 /var/www/html
+```
 
-###2.5 WordPress用DB・ユーザー作成（MariaDB）
-① MariaDBでWordPress用のDBとユーザーを作成
+### 2.5 WordPress用DB・ユーザー作成（MariaDB）
+
+ MariaDBでWordPress用のDBとユーザーを作成
+
+```bash
 sudo mysql -u root -p
 CREATE DATABASE wordpress DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 CREATE USER 'wpuser'@'localhost' IDENTIFIED BY 'password';
@@ -21,21 +25,23 @@ GRANT ALL PRIVILEGES ON wordpress.* TO 'wpuser'@'localhost';
 FLUSH PRIVILEGES;
 EXIT;
 
-###2.6 WordPress接続設定ファイル（wp-config.php）の編集手順
+```
+### 2.6 WordPress接続設定ファイル（wp-config.php）の編集手順
+
 WordPressのインストールディレクトリに移動
+
+```bash
 cd /var/www/html
 sudo cp wp-config-sample.php wp-config.php
 sudo nano wp-config.php
-// ↓データベース名
 define( 'DB_NAME', 'wordpress' );
-
-// ↓データベースユーザー
 define( 'DB_USER', 'wpuser' );
-
-// ↓そのユーザーのパスワード
-
 define( 'DB_PASSWORD', 'password' );
+編集後に Ctrl + O を押す
+→ 「ファイル名を確認して Enter」と表示されるので、そのまま Enter を押す
 
+保存が完了したら Ctrl + X を押して nano を終了する
+```
 ###2.7 WordPressディレクトリのパーミッション設定
 cd /var/www/html
 sudo chown -R www-data:www-data .
