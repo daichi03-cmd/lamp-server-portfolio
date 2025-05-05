@@ -42,11 +42,14 @@ define( 'DB_PASSWORD', 'password' );
 
 保存が完了したら Ctrl + X を押して nano を終了する
 ```
-###2.7 WordPressディレクトリのパーミッション設定
+### 2.7 WordPressディレクトリのパーミッション設定
+
+```bash
 cd /var/www/html
 sudo chown -R www-data:www-data .
 sudo find . -type d -exec chmod 755 {} \;
 sudo find . -type f -exec chmod 644 {} \;
+```
 
 ### 2.8 WordPress初期セットアップ（ブラウザ操作）
 
