@@ -12,7 +12,7 @@ sudo rm latest-ja.tar.gz
 sudo chown -R www-data:www-data /var/www/html
 sudo chmod -R 755 /var/www/html
 
-2.5 WordPress用DB・ユーザー作成（MariaDB）
+###2.5 WordPress用DB・ユーザー作成（MariaDB）
 ① MariaDBでWordPress用のDBとユーザーを作成
 sudo mysql -u root -p
 CREATE DATABASE wordpress DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
@@ -21,7 +21,7 @@ GRANT ALL PRIVILEGES ON wordpress.* TO 'wpuser'@'localhost';
 FLUSH PRIVILEGES;
 EXIT;
 
-2.6 WordPress接続設定ファイル（wp-config.php）の編集手順
+###2.6 WordPress接続設定ファイル（wp-config.php）の編集手順
 WordPressのインストールディレクトリに移動
 cd /var/www/html
 sudo cp wp-config-sample.php wp-config.php
@@ -36,31 +36,29 @@ define( 'DB_USER', 'wpuser' );
 
 define( 'DB_PASSWORD', 'password' );
 
-2.7 WordPressディレクトリのパーミッション設定
+###2.7 WordPressディレクトリのパーミッション設定
 cd /var/www/html
 sudo chown -R www-data:www-data .
 sudo find . -type d -exec chmod 755 {} \;
 sudo find . -type f -exec chmod 644 {} \;
 
-2.8 WordPress初期セットアップ（ブラウザ操作）
+### 2.8 WordPress初期セットアップ（ブラウザ操作）
+
+1. 以下のURLにアクセス:
 http://<LAMPサーバーのIPアドレス>/
-初期セットアップ画面が表示されることを確認
 
-以下の項目を入力してインストールを進める：
 
-サイトのタイトル
+2. 初期セットアップ画面が表示されることを確認。
 
-ユーザー名（WordPress管理者アカウント）
+3. 以下の項目を入力してインストールを進めます：
 
-パスワード（強力なものを推奨）
+- サイトのタイトル
+- ユーザー名（WordPress管理者アカウント）
+- パスワード（強力なものを推奨）
+- メールアドレス
+- 検索エンジンによるインデックス許可の有無（任意でチェック）
 
-メールアドレス
+4. 「WordPressをインストール」ボタンをクリック。
 
-検索エンジンによるインデックス許可の有無（任意でチェック）
-
-「WordPressをインストール」ボタンをクリック
-
-「成功しました！」と表示されればセットアップ完了
-
-コピーする
+5. 「成功しました！」と表示されればセットアップ完了。
 
