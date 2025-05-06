@@ -3,16 +3,30 @@
 #### 配置ディレクトリに移動
 ```bash
 cd /var/www/html
-sudo rm index.html
-sudo wget https://ja.wordpress.org/latest-ja.tar.gz
-sudo tar -xvzf latest-ja.tar.gz
-sudo mv wordpress/* .
-sudo rmdir wordpress
-sudo rm latest-ja.tar.gz
-sudo chown -R www-data:www-data /var/www/html
-sudo chmod -R 755 /var/www/html
 ```
-
+#### デフォルトの index.html を削除
+```bash　　
+sudo rm index.html
+```
+#### 日本語版 WordPress をダウンロードしそのアーカイブを展開
+```bash
+sudo wget https://ja.wordpress.org/latest-ja.tar.gz　　
+sudo tar -xvzf latest-ja.tar.gz
+```
+#### 解凍された WordPress のファイルを現在のディレクトリに移動
+```bash
+sudo mv wordpress/* .
+```
+#### 空のwordpressディレクトリと使用済みのアーカイブファイルを削除
+```bash
+sudo rmdir wordpress　　　WordPressの空のディレクトリを削除します。
+sudo rm latest-ja.tar.gz　　使用済みのアーカイブファイルを削除
+```
+#### 所有権を Apache 実行ユーザーに変更しディレクトリとファイルのパーミッションを一括設定
+```bash
+sudo chown -R www-data:www-data /var/www/html
+sudo chmod -R 755 /var/www/html　
+```
 ### 2.5 WordPress用DB・ユーザー作成（MariaDB）
 
  MariaDBでWordPress用のDBとユーザーを作成
@@ -28,7 +42,7 @@ EXIT;
 ```
 ### 2.6 WordPress接続設定ファイル（wp-config.php）の編集手順
 
-WordPressのインストールディレクトリに移動
+#### WordPressのインストールディレクトリに移動
 
 ```bash
 cd /var/www/html
